@@ -4,12 +4,12 @@
 
 int RandomNumber = new Random().Next(0, 10);
 Console.WriteLine(RandomNumber);
-
-Console.WriteLine("Программа загадала случайное число в диапазоне от 0 до 10. Угадай число за 3 попытки.");
-Console.Write("Введите число с клавиатуры: ");
-
 int count = 1;
 int limit = 3;
+
+Console.WriteLine("Программа загадала случайное число в диапазоне от 0 до 10. Угадай число. Число попыток = " + limit);
+Console.Write("Введите число с клавиатуры: ");
+
 while (count<=limit){
     int number = Convert.ToInt32(Console.ReadLine());
     if (RandomNumber.Equals(number)){
