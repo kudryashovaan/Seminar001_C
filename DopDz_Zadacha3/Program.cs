@@ -9,7 +9,8 @@ Console.WriteLine("Программа загадала случайное чис
 Console.Write("Введите число с клавиатуры: ");
 
 int count = 1;
-while (count<=3){
+int limit = 3;
+while (count<=limit){
     int number = Convert.ToInt32(Console.ReadLine());
     if (RandomNumber.Equals(number)){
         Console.Write("Поздравляем! Вы угадали число!");
@@ -22,7 +23,7 @@ while (count<=3){
         else {
             Console.WriteLine("Ваше число больше загаданного!");
         }
-        if(count<=2){
+        if(count<=limit-1){
             Console.Write("Введите число с клавиатуры: ");
         }  
     }
