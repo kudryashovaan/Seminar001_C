@@ -12,5 +12,5 @@ while (number<100 || number>999){
 }
 int third = number/10;
 int second = third%10;
-Console.WriteLine(second);
+Console.WriteLine("Вторая цифра этого числа: " + second);
 
