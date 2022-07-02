@@ -12,5 +12,5 @@ int by2 = InputInt("Введите координаты первой точки 
 int bz2 = InputInt("Введите координаты первой точки bz2: ");
 
 double distance = Math.Sqrt((bx2 - ax1)*(bx2 - ax1) + (by2 - ay1)*(by2 - ay1) + (bz2-az1)*(bz2-az1));
-Console.WriteLine(distance); 
+Console.WriteLine("Расстояние между точками: " + distance); 
 
