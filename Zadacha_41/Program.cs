@@ -7,7 +7,6 @@ int InputInt(string output) {
     return Convert.ToInt32(Console.ReadLine()); 
 }
 
-//int number = InputInt("Введите число: ");
 int m = InputInt("Сколько чисел будет введено с клавиатуры: ");;
 int[] array = new int[m];
 int count = 0;
