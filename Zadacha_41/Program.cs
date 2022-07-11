@@ -2,20 +2,23 @@
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223-> 3*/
 
-int InputInt(string output) {     
-    Console.Write(output);     
-    return Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите числа через запятую: ");
+string str = Console.ReadLine();
+string strings = str.Replace(",", "");
+char[] ch = new char[strings.Length];
+ch = strings.ToCharArray();
+int[] number = new int [ch.Length];
+
+for (int i=0; i<ch.Length; i++){
+    number[i] = Convert.ToInt32(new string(ch[i], 1));
+    Console.Write(number[i] + " ");
 }
-
-int m = InputInt("Сколько чисел будет введено с клавиатуры: ");;
-int[] array = new int[m];
+Console.WriteLine();
 int count = 0;
-
-for (int i=0; i<array.Length; i++){
-    array[i] = InputInt("Введите число: ");
-    if (array[i]>0){
-        count++;
-    }
+for (int i=0; i<number.Length; i++){
+   if (number[i]>0){
+       count++;
+   }
 }
 Console.WriteLine("Чисел больше 0: " + count);
 
