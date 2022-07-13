@@ -7,7 +7,7 @@ Console.WriteLine();
 int count = 0;
 
 for (int i=0; i<str.Length; i++){   
-    if ((i+1)<str.Length &&str[i] == '-'){
+    if ((i+1)<str.Length && str[i] == '-'){
         i++;
         while ((i+1)<str.Length && char.IsDigit(str[i])){
             if((i+1)<str.Length && !char.IsDigit(str[i+1])){
@@ -16,7 +16,7 @@ for (int i=0; i<str.Length; i++){
             i++;
             continue;
         }
-        
+    continue;
     }
     while ((i+1)<str.Length && char.IsDigit(str[i+1])) {
         i++;
@@ -26,8 +26,17 @@ for (int i=0; i<str.Length; i++){
         }
     } 
     if (char.IsDigit(str[i])){       
-        if (str[i] > '0') 
+        if (str[i] > '0'){ 
         count++;
+        }
+        while ((i+1)<str.Length && char.IsDigit(str[i+1])){
+            if((i+1)<str.Length && !char.IsDigit(str[i+1])){
+                continue;
+            }  
+            i++;
+            if (i == str.Length-1)
+            continue;
+        }
     }
 }
 Console.WriteLine("Чисел больше 0: " + count);
