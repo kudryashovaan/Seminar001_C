@@ -6,13 +6,21 @@ string str = Console.ReadLine();
 Console.WriteLine();
 int count = 0;
 
-for (int i=0; i < str.Length; i++){   
-    if ((i+1)<str.Length && char.IsDigit(str[i]) && str[i] == '-'){
-        continue;
-    }
-    while ((i+1) < str.Length && char.IsDigit(str[i+1])) {
+for (int i=0; i<str.Length; i++){   
+    if ((i+1)<str.Length &&str[i] == '-'){
         i++;
-        if (!char.IsDigit(str[i+1]) && i+1 < str.Length){
+        while ((i+1)<str.Length && char.IsDigit(str[i])){
+            if((i+1)<str.Length && !char.IsDigit(str[i+1])){
+                continue;
+            }  
+            i++;
+            continue;
+        }
+        
+    }
+    while ((i+1)<str.Length && char.IsDigit(str[i+1])) {
+        i++;
+        if (!char.IsDigit(str[i+1]) && (i+1)<str.Length){
         count++;
         continue;
         }
