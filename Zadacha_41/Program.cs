@@ -14,7 +14,8 @@ for (int i=0; i<str.Length; i++){
         i++;    
     } 
     result = Convert.ToInt32(s);
-    if (result < 0){
+    s = "";
+    if (result > 0){
         count++;
     }   
 }  
