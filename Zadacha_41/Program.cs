@@ -3,39 +3,22 @@
 1, -7, 567, 89, 223-> 3*/
 Console.WriteLine("Введите числа через запятую: ");
 string str = Console.ReadLine();
+string s = "";
+int result = 0;
 Console.WriteLine();
 int count = 0;
 
-for (int i=0; i<str.Length; i++){   
-    
-    if ((i+1)<str.Length && str[i] == '-'){
-        i++;
-        while ((i+1)<str.Length && char.IsDigit(str[i])){
-            if((i+1)<str.Length && !char.IsDigit(str[i+1])){
-                continue;
-            }  
-            i++;
-            continue;
-        }
-        continue;
-    }
-
-    if (char.IsDigit(str[i])){       
-        if (str[i] > '0'){ 
+for (int i=0; i<str.Length; i++){
+    while (str[i] != ','){
+        s = s + str[i];    
+        i++;    
+    } 
+    result = Convert.ToInt32(s);
+    if (result < 0){
         count++;
-        }
-        if ((i+1)<str.Length && char.IsDigit(str[i])){
-        while ((i+1)<str.Length && char.IsDigit(str[i])){
-            if((i+1)<str.Length && !char.IsDigit(str[i+1])){
-                continue;
-            }  
-            i++;
-            continue;
-        }
-        continue;
-    }
-    }
+    }   
+}  
     
-}
+    
 Console.WriteLine("Чисел больше 0: " + count);
 
