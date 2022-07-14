@@ -9,7 +9,7 @@ Console.WriteLine();
 int count = 0;
 
 for (int i=0; i<str.Length; i++){
-    while (str[i] != ','){
+    while ((i+1)<str.Length && str[i] != ','){
         s = s + str[i];    
         i++;    
     } 
