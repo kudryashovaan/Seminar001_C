@@ -9,17 +9,17 @@ Console.WriteLine();
 int count = 0;
 
 for (int i=0; i<str.Length; i++){
-    while ((i+1)<str.Length && str[i] != ','){
-        s = s + str[i];    
-        i++;    
+    if (char.IsDigit(str[i]) || str[i] == '-'){
+        s = s + str[i];       
     } 
-    result = Convert.ToInt32(s);
-    s = "";
-    if (result > 0){
+    if(str[i] == ','){
+       result = Convert.ToInt32(s); 
+       s = "";
+       if (result > 0){
         count++;
-    }   
-}  
+       } 
+    }      
+}     
     
-    
-Console.WriteLine("Чисел больше 0: " + count);
+Console.WriteLine(count + " числа больше 0.");
 
