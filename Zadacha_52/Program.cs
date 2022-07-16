@@ -21,12 +21,20 @@ for (int i = 0; i < m; i++){
     }
     Console.WriteLine();
 }
-int sumStr = 0;
-for (int i = 0; i < m; i++){
-    for (int j = 0; j < n; j++){
-        sumStr = sumStr + array[i, j];
+
+int sum = 0;
+double sredAr = 0;
+for (int i = 0; i < n; i++){
+    for (int j = 0; j < m; j++){
+        sum+= array[j,i];
     }
-    Console.WriteLine("Сумма строки " + (i+1) + ": " + sumStr);
-    sumStr = 0;
+    sredAr = (double)sum/m;
+    sum = 0;
+    Console.WriteLine("Среднее арифметическое столбца " + (i+1)+ " = " + Math.Round(sredAr, 1));
 }
+
+
+
+
+
 
