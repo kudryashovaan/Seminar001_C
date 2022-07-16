@@ -11,13 +11,13 @@ int m = InputInt("Введите число строк массива: ");
 int n = InputInt("Введите число граф массива: ");
 Random rnd = new Random();
 
-double[,] a = new double[m, n];
+double[,] array = new double[m, n];
  Random random = new Random();
     
 for (int i = 0; i < m; i++){
     for (int j = 0; j < n; j++){
-        a[i, j] = 20.0*rnd.Next()/2147483648-10.0;
-        Console.Write("{0,5:f1}", a[i, j]);
+        array[i, j] = 20.0*rnd.Next()/2147483648-10.0;
+        Console.Write("{0,5:f1}", array[i, j]);
     }
     Console.WriteLine();
     }
