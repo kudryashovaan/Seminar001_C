@@ -3,9 +3,9 @@
 M = 1; N = 5. -> ""1, 2, 3, 4, 5""
 M = 4; N = 8. -> ""4, 6, 7, 8""*/
 
-string NaturNumbersString(int a, int b)
+string NaturNumbersString(int m, int n)
 {
-if (a <= b) return $"{a}" + ", " + NaturNumbersString(a + 1, b);
+if (m <= n) return $"{m}" + ", " + NaturNumbersString(m + 1, n);
 else return String.Empty;
 }
 
