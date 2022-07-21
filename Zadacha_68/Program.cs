@@ -16,6 +16,6 @@ int AkkermanFun(int m, int n){
     return AkkermanFun(m,n);
 }
     
-Console.WriteLine(AkkermanFun(2, 3));
+Console.WriteLine(AkkermanFun(3, 2));
         
     
